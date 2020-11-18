@@ -1,7 +1,7 @@
 const mtk = 80;
-const bahasaIndonesia = 20;
-const bahasaInggris = 0;
-const ipa = 100;
+const bahasaIndonesia = 90;
+const bahasaInggris = 89;
+const ipa = 69;
 const rataNilai = mtk >= 0 && mtk <= 100 && bahasaIndonesia >= 0 && bahasaIndonesia <= 100 && bahasaInggris >= 0 && bahasaInggris <= 100 && ipa >= 0 && ipa <= 100 ? 
                  typeof mtk === 'number' && typeof bahasaIndonesia === 'number' && typeof bahasaInggris === 'number' && typeof ipa === 'number' ?
                  (mtk + bahasaIndonesia + bahasaInggris + ipa)/4 : "Nilai yang anda masukan bukan Number"
