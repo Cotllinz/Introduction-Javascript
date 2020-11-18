@@ -1,5 +1,4 @@
-# Introduction-Javascript
-# Week 2
+# Week 2 - Introduction-Javascript
 <h1> Trainer : Bagus Tri Harjanto </h1>
 Tempat Pengumpulan Tugas - Tugas :<br> 
 Part 1 <br> 
