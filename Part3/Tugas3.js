@@ -7,8 +7,10 @@ const totalBasket  = (basket) => {
                return Number(acc) + Number(current)
             })
         let hargaPerBarang = 5000;
-        let hitungHarga = totalBarang >= 5 ? totalBarang * hargaPerBarang : "Barang Kurang dari 5"
-           resolve(`Harga total semua barang dibasketmu adalah : ${hitungHarga}`)
+        let hitungHarga = totalBarang >= 20 ? totalBarang * hargaPerBarang * 0.5 :
+                          totalBarang >= 5 ? totalBarang * hargaPerBarang : `Tidak Ditemukan !!! Minimal Pembelian 5 unit/barang sedangkan barangmu hanya ${totalBarang} yuk tambah lagi total pembeliannya`
+           resolve( totalBarang >= 20 ? `Selamat Kamu dapat diskon 50% karena pembelian mencapai ${totalBarang} unit/barang, Harga total semua barang dibasketmu adalah : ${hitungHarga}`
+                                        : `Harga total semua barang dibasketmu adalah : ${hitungHarga}`)
         }, 1000);
         }else{
         setTimeout(() => {
@@ -17,7 +19,7 @@ const totalBasket  = (basket) => {
         }
     })
 }
-totalBasket([5, 5])  .then((result) => {
+totalBasket([5,15])  .then((result) => {
                     console.log(result)
                 }).catch((error) => {
                     console.log(error)
