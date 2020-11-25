@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 4 - Fetch Method</title>
+</head>
+<body>
+    <div id="name"></div>
+    <script>
+        const get = () => fetch('https://jsonplaceholder.typicode.com/users')
+        let a = get().then(res => res.json())
+        let name = a.then(data => (data.map((e, i) => `${i + 1}. ${e.name}`)))              
+        
+        a.then(postRes => {
+            name.then(getName => (
+                {postRes, getName})
+            )
+        .then(results => {
+                console.log(results.postRes)
+                     setTimeout(() => {
+                      return document.getElementById("name").innerHTML = results.getName.join("<br>");
+                    }, 2000);
+            })
+        })
+         .catch((error) => {
+                console.error('Error:', error);
+            })
+        
+     /*       
+      fetch('https://jsonplaceholder.typicode.com/users', {
+            })
+                .then(res => res.json())
+                .then(data => {
+                     let nama = data.map((e, i) => `${i + 1}. ${e.name}`)
+                    setTimeout(() => {  
+                    return document.getElementById("name").innerHTML = nama.join("<br>");
+                    }, 2000);
+                   
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                }); 
+            */
+
+    </script>
+</body>
+</html>
