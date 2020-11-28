@@ -45,7 +45,7 @@ const arkFood = (harga, voucherDiskon, deliveryDistance, pajak) => {
       // Subtotal
       const subTotal =
         isNaN(potongan) && isNaN(deliveryCost) && isNaN(taxCost)
-          ? "SubTotal Tidak Ditemukan"
+          ? harga
           : isNaN(potongan)
           ? Math.round(harga + deliveryCost + taxCost)
           : isNaN(deliveryCost)
