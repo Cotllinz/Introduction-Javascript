@@ -2,7 +2,8 @@ const divideAndSort = (sortNumb) => {
   if (typeof sortNumb === "number" && sortNumb) {
     let removeZero = sortNumb.toString().split(0);
     let result = "";
-    for (let i = 0; i < removeZero.length; i++) {
+    let x = removeZero.length
+    for (let i = 0; i < x; i++) {
       result += removeZero[i]
         .split("")
         .sort((a, b) => a - b)
